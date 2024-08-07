@@ -1,6 +1,8 @@
 import os
+import sys
 from cryptography.fernet import Fernet
 import getpass
+import subprocess
 
 # Generar una clave y guardarla en un archivo (haz esto solo una vez)
 def generate_key():
@@ -45,7 +47,15 @@ def delete_password(service):
             if service_name != service:
                 file.write(line)
 
+def check_sudo():
+    if os.geteuid() != 0:
+        print("This script requires sudo privileges. Please run it with sudo.")
+        # Re-run the script with sudo
+        subprocess.call(['sudo', 'python3'] + sys.argv)
+        sys.exit()
+
 def main():
+    check_sudo()
     print("Password Manager")
     print("1. Add Password")
     print("2. Get Password")
