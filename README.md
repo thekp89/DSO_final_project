@@ -4,8 +4,8 @@ A simple password manager from terminal that keeps your passwords in a file and 
 ## Dependencies
 
 - Cryptography 
-        pip install cryptography
-        
+  ``` pip install cryptography ```
+  
         
 ## Things to do
 - [ ] add a Graphical interface (maybe)
