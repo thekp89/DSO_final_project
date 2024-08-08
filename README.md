@@ -5,10 +5,14 @@ A simple password manager from terminal that keeps your passwords in a file and 
 
 - Cryptography 
   ``` pip install cryptography ```
-  
         
 ## Things to do
 - [ ] add a Graphical interface (maybe)
-- [ ] Request for sudo authentification
+- [x] Request for sudo authentification
 - [ ] Autofill option or something like that
 - [ ] Password creation option
+
+## Problems
+
+You can still delete password even If it is not run as sudo.
+
