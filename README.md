@@ -14,5 +14,5 @@ A simple password manager from terminal that keeps your passwords in a file and 
 
 ## Problems
 
-You can still delete password even If it is not run as sudo.
+- [x]You can still delete password even If it is not run as sudo.
 
